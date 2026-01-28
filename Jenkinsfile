@@ -1,19 +1,12 @@
 pipeline {
     agent any
 
-   tools {
-    jdk 'JAVA_HOME'
-    maven 'Maven'
-}
-
+    tools {
+        jdk 'JAVA_HOME'
+        maven 'Maven'
+    }
 
     stages {
-
-        stage('Clone Code') {
-            steps {
-                git 'https://github.com/USERNAME/REPO.git'
-            }
-        }
 
         stage('Build') {
             steps {
