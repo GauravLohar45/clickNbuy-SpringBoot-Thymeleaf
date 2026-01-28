@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+     environment {
+        JAVA_HOME = "/ACTUAL/JAVA/PATH"
+        PATH = "${JAVA_HOME}/bin:${env.PATH}"
+    }
+
   tools {
     jdk 'JAVA_HOME'
     maven 'Maven'
